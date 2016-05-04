@@ -31,6 +31,7 @@ You can add to your application.rb file:
 
 `config.log_path = 'path-to-default-log-to-read'`
 
+This value will be used later as default value for rake task.
 
 ## How to use
 
@@ -38,7 +39,7 @@ Run:
 
 `bundle exec rake parser:run_parser[path-to-logfile]`
 
-if you don´t specify a path to the logfile the system will take the path from application.rb file (if there is any).
+if you don´t specify a path to the logfile the system will take the path from application.rb file (if there is any). This rake task takes the log, parses it, and saves the result in Log model. Also keep listening the log for new entries.
 
 You can initalize a Parser object from command line:
 
@@ -49,6 +50,7 @@ allow_assets : Flag that determines if the assets logs are treated or not (by de
 
 
 The program provides two methods that you can be used from command line to retrive data from the log file:
+
  ```
 parser.read
 parser.tail
