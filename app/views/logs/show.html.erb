@@ -1,0 +1,47 @@
+<div class="jumbotron">
+  <p id="notice"><%= notice %></p>
+  <h3 class="label label-default">Detail of UUID </h3>
+  <p>
+    <strong>UUID:</strong>
+    <%= @log.uuid %>
+  </p>
+
+  <p>
+    <strong>IP:</strong>
+    <%= @log.ip %>
+  </p>
+
+  <p>
+    <strong>Result:</strong>
+    <%= @log.result %>
+  </p>
+
+  <p>
+    <strong>Method:</strong>
+    <%= @log.method %>
+  </p>
+  <p>
+    <strong>URL:</strong>
+    <%= @log.url %>
+  </p>
+  <% unless @log.parameters.nil? %>
+    <p>
+      <strong>Parameters:</strong>
+      <%= @log.parameters %>
+    </p>
+  <% end %>
+  <% unless @log.warning.nil? %>
+    <p>
+      <strong>Warning:</strong>
+      <%= @log.warning %>
+    </p>
+  <% end %>
+  <% unless @log.error.nil? %>
+    <p>
+      <strong>Error:</strong>
+      <%= @log.error %>
+    </p>
+  <% end %>
+
+  <%= link_to 'Back', logs_path %>
+</div>

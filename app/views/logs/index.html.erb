@@ -1,0 +1,31 @@
+<h3 class="label label-default">Listing Logs</h3>
+<p id="notice"><%= notice %></p>
+
+<table class ="table table-striped table-border table-hover">
+  <thead>
+    <tr>
+      <th>UUID</th>
+      <th>IP</th>
+      <th>Result</th>
+      <th>Method</th>
+      <th>URL</th>
+      <th>Time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logs.each do |log| %>
+      <tr>
+        <td><%= log.uuid %></td>
+        <td><%= log.ip %></td>
+        <td><%= log.result %></td>
+        <td><%= log.method %></td>
+        <td><%= log.url %></td>
+        <td><%= log.time %></td>
+        <td><%= link_to 'Show', log %></td>
+        <td><%= link_to 'Destroy', log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

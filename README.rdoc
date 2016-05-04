@@ -1,0 +1,7 @@
+== README
+
+Please, for more info visit:
+
+https://github.com/PedroEscudero/log-parser
+
+
