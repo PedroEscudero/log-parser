@@ -1,7 +1,7 @@
 # Log Parser
 
-This is a log parser for ruby on rails  projects. It uses a database in sqlLite and Rails 4.4 with Ruby 2.3
-Log parser reads the log of a rails project an save its data in a model call Log. 
+This is a log parser for ruby on rails  projects. It uses a database in SQLite and Rails 4.2.6 
+Log parser reads the log of a rails project an save its data in a model call Logcafter formating it. 
 
 ##   Instalation
 
@@ -9,46 +9,51 @@ Log parser comes with its own vagrantfile, which provides an easy system to inst
 
 First clone the project in your local, then:
 
-vagrant up
+>vagrant up
 
 This will install the environment and the project dependencies.
 
 To access to the project:
 
-vagrant ssh
-vagrant 
-cd /vagrant
-bundle install
-bundle exec rails c
-
-## Configuration
+>vagrant ssh
+>vagrant 
+>cd /vagrant
+>bundle install
+>bundle exec rails c
 
 Of course you can install it by yourself as any other Rails project.
 
+## Configuration
+
+
+
 ## Use
 
-From command lines:
+You can initalize a Parser object from command line:
 
->Parser.new(path, allow_assets = false)
-
-path : complete path of the log file
-allow_assets : Flag that determines
-
-
+>
+>parser = Parser.new(path, allow_assets = false)
+>
 
 The program provides two methods that you can be used from command line to retrive data from the log file:
 
+path : complete path of the log file
+allow_assets : Flag that determines is the assets logs are treated or not (by default are not treated).
 
 
+
+
+
+
+
+>p
 
 You can see the results of the log parser in the root of the project accessing thought web. For example in local, after bundle exec rails s -b 0.0.0.0, you can see the list of logs recovery in http://localhost:3000 (notice that if you have more vagrant boxes up maybe the port can be different).
 
-Also you can see the results you can access to the console and do queries directly to the model.F ields of the database are:
+Also you can see the results you can access to the console and do queries directly to the model. The UUID is unique and the primary key of the model/table. In each row is integrated all the revelant information about each UUID taked from the log file.
 
-The UUID is unique and a primary key of the model/table. In each row is integrated all the revelant information about each UUID taked from the log file.
+# Testing
 
+For running test run
 
-
-For seeing the results you can use 
-
-bundle exec rails s -b 0.0.0.0
+>rake
