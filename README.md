@@ -1,7 +1,7 @@
 # Log Parser
 
 This is a log parser for ruby on rails  projects. It uses a database in SQLite and Rails 4.2.6 
- Log parser reads the log of a rails project an save its data in a model call Logcafter formating it. 
+ Log parser reads the log of a rails project an save its data in a model call Log, after formating it. 
 
 ##   Instalation
 
