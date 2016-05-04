@@ -53,8 +53,9 @@ The program provides two methods that you can be used from command line to retri
 parser.read
 parser.tail
  ```
-read method read the log and persits data in Log model.
-tail method read the log, persits data in Log model, and also keep listing the log file for ading new registres to the database.
+read method reads the log and persits data in Log model.
+
+tail method reads the log, persits data in Log model, and also keep listing the log file for ading new registres to the database.
 
 You can see the results of the log parser in the root of the project accessing thought web. For example in local, after bundle exec rails s -b 0.0.0.0, you can see the list of logs recovery in http://localhost:3000 (notice that if you have more vagrant boxes up maybe the port can be different).
 
