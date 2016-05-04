@@ -9,23 +9,19 @@ Log parser comes with its own vagrantfile, which provides an easy system to inst
 
 First clone the project in your local, then:
 
-`
-
-vagrant up
-
-`
+`vagrant up`
 
 This will install the environment and the project dependencies.
 
 To access to the project:
 
-`
+ ```
 vagrant ssh
 vagrant 
 cd /vagrant
 bundle install
 bundle exec rails c
-`
+ ```
 
 Of course you can install it by yourself as any other rails project.
 
@@ -53,10 +49,10 @@ allow_assets : Flag that determines if the assets logs are treated or not (by de
 
 
 The program provides two methods that you can be used from command line to retrive data from the log file:
-`
+ ```
 parser.read
 parser.tail
-`
+ ```
 read method read the log and persits data in Log model.
 tail method read the log, persits data in Log model, and also keep listing the log file for ading new registres to the database.
 
