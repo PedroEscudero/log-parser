@@ -84,6 +84,6 @@ Vagrant.configure(2) do |config|
     chmod -R g+rwxXs /usr/local/rbenv
     gem install bundler
     rbenv rehash
-    yum install sqlite-devel
+    yum install -y sqlite-devel
   SHELL
 end
