@@ -29,7 +29,7 @@ class ParserTest < ActiveSupport::TestCase
     ")
   end
 
-  test "Read from a parser" do
+  test "Tail from a parser" do
     parser.tail
     assert_equal(Log.count, 159)
     assert_equal(Log.last.ip, '127.0.0.1')
