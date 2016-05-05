@@ -63,7 +63,8 @@ You can see the results of the log parser in the root of the project accessing t
 
 You can access to the console and do queries directly to the model. The UUID is the unique primary key of the model/table. In each row is integrated all the revelant information about each UUID taked from the log file. The structure of Log model is:
  ```
-Log(uuid: string, message: string, ip: string, url: string, result: string, parameters: string, method: string, time: datetime, warning: string, error: string, created_at: datetime, updated_at: datetime)
+Log(uuid: string, message: string, ip: string, url: string, result: string, parameters: string, method: string, time: datetime, 
+warning: string, error: string, created_at: datetime, updated_at: datetime)
  ```
 
 ## Testing
