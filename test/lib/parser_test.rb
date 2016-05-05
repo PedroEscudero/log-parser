@@ -22,11 +22,7 @@ class ParserTest < ActiveSupport::TestCase
     assert_equal(Log.last.uuid, "ff1c565f-7133-4eb7-ada9-69dbf65606d8")
     assert_equal(Log.last.result, "200 OK")
     assert_equal(Log.last.method, "GET")
-    assert_equal(Log.find('84312c7e-32de-4560-88e9-71bc540b8988').warning, " DEPRECATION WARNING: The following options in your Series.has_many :issues declaration are deprecated: :order. Please use a scope block instead. For example, the following:
-    s: { spam: true }, class_name: 'Comment'
-    e spam: true }, class_name: 'Comment'
-    s/ianenders/Workspace/ccl/app/models/series.rb:3)
-    ")
+    assert_equal(Log.find('84312c7e-32de-4560-88e9-71bc540b8988').warning, " DEPRECATION WARNING: The following options in your Series.has_many :issues declaration are deprecated: :order. Please use a scope block instead. For example, the following:\ns: { spam: true }, class_name: 'Comment'\ne spam: true }, class_name: 'Comment'\ns/ianenders/Workspace/ccl/app/models/series.rb:3)\n")
   end
 
   test "Tail from a parser" do
