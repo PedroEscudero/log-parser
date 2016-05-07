@@ -3,7 +3,7 @@
 This is a log parser for ruby on rails  projects. It uses a database in SQLite and Rails 4.2.6 
  Log parser reads the log of a rails project and save its data in a model call Log, after formating it. 
 
-##   Instalation
+##   Installation
 
 Log parser comes with its own vagrantfile, which provides an easy system to install the project. You only need to have installed vagrant and virtualbox in your computer.
 
